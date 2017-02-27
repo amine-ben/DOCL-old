@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DOCL - Libs
+Bundle-SymbolicName: fr.inria.diverse.docl.libs
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Inria
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

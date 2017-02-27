@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="fr.inria.diverse.docl.3rdparty.sdk"
+      label="DOCL 3RD Party SDK Feature"
+      version="1.0.0.qualifier"
+      provider-name="INRIA -- DIVERSE --">
+
+   <plugin
+         id="fr.inria.diverse.fr.inria.diverse.docl.3rdparty"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+</feature>

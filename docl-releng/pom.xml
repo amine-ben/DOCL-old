@@ -1,0 +1,115 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+	<groupId>fr.inria.diverse</groupId>
+	<artifactId>docl-root</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<relativePath>../</relativePath>
+	</parent>
+
+	<artifactId>docl-releng</artifactId>
+	<packaging>pom</packaging>
+	
+	<modules>
+		<module>fr.inria.diverse.docl</module>
+		<module>fr.inria.diverse.docl.ui</module>
+		<module>fr.inria.diverse.docl.sdk</module>
+		<module>fr.inria.diverse.docl.p2repo</module>
+		<module>fr.inria.diverse.docl.product</module>
+		<module>fr.inria.diverse.docl.model</module>
+		<module>fr.inria.diverse.docl.tests</module>
+
+	</modules>
+
+	<dependencies>
+	    <dependency>
+	      <groupId>fr.inria.diverse</groupId>
+	      <artifactId>fr.inria.diverse.docl.3rdparty</artifactId>
+	      <version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		<!--dependency>
+	      <groupId>fr.inria.diverse</groupId>
+	      <artifactId>fr.inria.diverse.docl.3rdparty.bundle</artifactId>
+	      <version>1.0.0-SNAPSHOT</version>
+	    </dependency-->
+ 	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2.1</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<repositories>
+
+		<repository>
+			<id>neon</id>
+			<url>http://download.eclipse.org/releases/neon/201606221000</url>
+			<layout>p2</layout>
+		</repository>
+		<repository>
+			<id>xtext</id>
+			<url>http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.10.0/</url>
+			<layout>p2</layout>
+		</repository>
+		<repository>
+			<id>mwe</id>
+			<url>http://download.eclipse.org/modeling/emft/mwe/updates/releases/2.9.0/</url>
+			<layout>p2</layout>
+		</repository>
+		<repository>
+			<id>emf</id>
+			<url>http://download.eclipse.org/modeling/emf/emf/updates/2.11.x/</url>
+			<layout>p2</layout>
+		</repository>
+		<repository>
+			<id>xpand</id>
+			<url>http://download.eclipse.org/modeling/tmf/xtext/updates/releases/xpand/</url>
+			<layout>p2</layout>
+		</repository>
+	</repositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.xtend</groupId>
+				<artifactId>xtend-maven-plugin</artifactId>
+				<version>${xtext-version}</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+						<configuration>
+							<!-- need to prefix by basedir to generate to currently built module-->
+							<outputDirectory>${basedir}/xtend-gen</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+		    <plugin>
+		        <groupId>org.eclipse.tycho</groupId>
+		        <artifactId>tycho-maven-plugin</artifactId>
+		        <version>${tycho-version}</version>
+		        <extensions>true</extensions>
+		    </plugin>
+		    <plugin>
+		        <groupId>org.eclipse.tycho</groupId>
+		        <artifactId>target-platform-configuration</artifactId>
+		        <version>${tycho-version}</version>
+		        <configuration>
+		          <pomDependencies>consider</pomDependencies>
+		        </configuration>
+		    </plugin>
+
+		</plugins>
+	</build>
+</project>

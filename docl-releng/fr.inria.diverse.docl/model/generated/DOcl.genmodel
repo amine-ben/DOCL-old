@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.inria.diverse.docl/src-gen" editDirectory="//home/amine/git/docl/docl-releng/fr.inria.diverse.docl.edit/src"
+    editorDirectory="//home/amine/git/docl/docl-releng/fr.inria.diverse.docl.editor/src"
+    modelPluginID="fr.inria.diverse.docl" forceOverwrite="true" modelName="DOcl" updateClasspath="false"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" complianceLevel="6.0"
+    copyrightFields="false" editPluginID="fr.inria.diverse.docl.edit" editorPluginID="fr.inria.diverse.docl.edit"
+    runtimeVersion="2.12">
+  <genPackages prefix="Docl" basePackage="fr.inria.diverse.docl" disposableProviderFactory="true"
+      fileExtensions="docl" ecorePackage="DOcl.ecore#/">
+    <genClasses ecoreClass="DOcl.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DOcl.ecore#//Model/greetings"/>
+    </genClasses>
+    <genClasses ecoreClass="DOcl.ecore#//Greeting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DOcl.ecore#//Greeting/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

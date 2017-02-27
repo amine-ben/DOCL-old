@@ -1,0 +1,9 @@
+grammar fr.inria.diverse.docl.DOcl with org.eclipse.xtext.common.Terminals
+
+generate docl "http://fr.inria/diverse/DOcl"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
