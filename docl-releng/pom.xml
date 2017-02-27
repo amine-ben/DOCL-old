@@ -43,9 +43,8 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
+	
 	<repositories>
-
 		<repository>
 			<id>neon</id>
 			<url>http://download.eclipse.org/releases/neon/201606221000</url>

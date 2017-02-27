@@ -24,7 +24,7 @@ Require-Bundle: org.eclipse.xtext;bundle-version="[2.10.0,2.11.0)";visibility:=r
 Import-Package: org.apache.log4j,
  org.apache.spark.rdd,
  org.eclipse.xtext.xbase.lib
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: fr.inria.diverse,
  fr.inria.diverse.docl,
  fr.inria.diverse.docl.services,
