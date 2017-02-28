@@ -3,7 +3,7 @@ Bundle-SymbolicName: fr.inria.diverse.docl.3rdparty
 Embed-Directory: libs
 Built-By: amine
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1488202318954
+Bnd-LastModified: 1488303783116
 Embed-Dependency: spark-core_2.10
 Import-Package: akka.actor;version="2.3";resolution:=optional,akka.eve
  nt;version="2.3";resolution:=optional,akka.pattern;version="2.3";reso
